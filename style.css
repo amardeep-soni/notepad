@@ -1,4 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .icon{
     cursor: pointer;
     margin: 0 10px;
+}
+
+/*  index style */
+#index {
+    position: relative;
+    overflow: hidden;
+}
+
+#index #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/back.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+
+}
+
+#index #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#index .text {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#index a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 4px 32px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#index a:hover {
+    color: black;
+    background: white;
 }

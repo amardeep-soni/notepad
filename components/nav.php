@@ -2,12 +2,16 @@
 $signupActive = "";
 $loginActive = "";
 $welcomeActive = "";
+$notesActive = "";
+
 if ($currentPage == "signup") {
     $signupActive = "active";
 } else if ($currentPage == "login") {
     $loginActive = "active";
 } else if ($currentPage == "welcome") {
     $welcomeActive = "active";
+}else if ($currentPage == "notes") {
+    $notesActive = "active";
 }
 echo "<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
         <a class='navbar-brand' href='#'>Notepad</a>
@@ -19,6 +23,9 @@ echo "<nav class='navbar navbar-expand-lg navbar-dark bg-dark'>
 if ($loginStatus) {
     echo "<li class='nav-item ${welcomeActive}'>
             <a class='nav-link' href='welcome.php'>Welcome</a>
+        </li>
+        <li class='nav-item ${notesActive}'>
+            <a class='nav-link' href='notes.php'>My Notes</a>
         </li>
         <li class='nav-item'>
             <a class='nav-link' href='logout.php'>Logout</a>

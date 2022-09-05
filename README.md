@@ -1,2 +1,2 @@
-# notesApp
+# Notepad
 This is the notes app where user can create account and login to add their notes...

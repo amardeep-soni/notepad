@@ -7,6 +7,12 @@ session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     header("location:login.php");
     exit;
+} else {
+    $user = $_SESSION['username'];
+    include 'components/connectdb.php';
+    $sql = "CREATE TABLE IF NOT EXISTS `user_$user` (`sno` INT(8) NOT NULL AUTO_INCREMENT , `title` VARCHAR(255) NOT NULL , `description` TEXT NOT NULL , PRIMARY KEY (`sno`))";
+    $result = mysqli_query($conn, $sql);
+    mysqli_close($conn);
 }
 ?>
 

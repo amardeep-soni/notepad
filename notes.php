@@ -4,12 +4,12 @@ $currentPage = "notes";
 
 session_start();
 
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
-    header("location:login.php");
+if (!isset($_SESSION['id'])) {
+    header("location:account.php");
     exit;
 } else {
-    $user = $_SESSION['username'];
-    $userTable = "user_${user}";
+    $id = $_SESSION['id'];
+    $userTable = "user_${id}";
 }
 ?>
 

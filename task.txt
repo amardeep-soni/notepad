@@ -1,0 +1,6 @@
+update design
+responsive
+make 
+remove welcome page
+make star button for top
+edit delete modal in center

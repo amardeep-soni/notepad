@@ -1,12 +1,14 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
-    $location = "login";
+if (!isset($_SESSION['id'])) {
+    $location = "account";
     $user = "!";
+    $buttonText = "Get Started";
 } else {
-    $location = "welcome";
-    $user = ", ".$_SESSION['username'];
+    $location = "notes";
+    $user = ", " . $_SESSION['name'];
+    $buttonText = "Create Notes";
 }
 ?>
 
@@ -27,7 +29,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
         <p class="text">Hi<?php echo $user ?></p>
         <p class="text">Welcome to Amardeep Notepad</p>
         <div id="btn">
-            <a href="<?php echo $location; ?>.php">Get Started</a>
+            <a href="<?php echo $location; ?>.php"><?php echo $buttonText ?></a>
         </div>
     </div>
 </body>

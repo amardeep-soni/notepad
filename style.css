@@ -90,6 +90,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .card {
@@ -179,6 +180,9 @@
     cursor: pointer;
     font-size: 18px;
 }
+.card .card-footer i:hover{
+    opacity: 0.6;
+}
 
 .card .card-footer .edit-icon {
     color: #2263f1;
@@ -198,4 +202,10 @@
 
 .card .card-footer .star-icon.active {
     color: #2263f1;
+}
+
+@media only screen and (max-width: 500px) {
+    #heading {
+        font-size: 22px;
+    }
 }

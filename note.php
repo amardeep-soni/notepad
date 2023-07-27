@@ -25,9 +25,6 @@ if (!isset($_SESSION['id'])) {
 </head>
 
 <body id="notesBody">
-    <?php
-    include 'components/insertUpdateDelete.php';
-    ?>
     <p id="heading">Amardeep Notepad <a href="./components/logout.php" class="btn logout">Logout</a></p>
     <div class="cont">
         <div class="itemsCont">

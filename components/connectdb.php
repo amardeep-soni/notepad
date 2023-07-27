@@ -3,12 +3,8 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "notepad";
-$tableName = "users";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$conn) {
-    die("sorry we failed to connect to database: " . mysqli_connect_error());
-} else {
-    // echo "connection succesfull";
+if (isset($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+    $userTable = "user_${id}";
 }
+$conn = mysqli_connect($servername, $username, $password, $dbname);

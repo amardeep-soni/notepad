@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "connectdb.php";
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $name = mysqli_real_escape_string($conn, $_POST['name']);

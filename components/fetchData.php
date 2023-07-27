@@ -1,6 +1,6 @@
 <?php
 include 'components/connectdb.php';
-$selectSql = "SELECT * FROM `$userTable` ORDER BY imp DESC";
+$selectSql = "SELECT * FROM `$userTable` ORDER BY `imp` DESC, `timestamp` DESC";
 
 $selectResult = mysqli_query($conn, $selectSql);
 //calculate numbers of rows

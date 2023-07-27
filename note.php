@@ -1,12 +1,8 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['id'])) {
-    header("location:account.php");
+    header("location: ./");
     exit;
-} else {
-    $id = $_SESSION['id'];
-    $userTable = "user_${id}";
 }
 ?>
 

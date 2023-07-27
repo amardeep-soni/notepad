@@ -6,7 +6,7 @@ if (!isset($_SESSION['id'])) {
     $user = "!";
     $buttonText = "Get Started";
 } else {
-    $location = "notes";
+    $location = "note";
     $user = ", " . $_SESSION['name'];
     $buttonText = "Create Notes";
 }

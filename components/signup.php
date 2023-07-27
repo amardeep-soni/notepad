@@ -17,8 +17,16 @@ if (!empty($name) && !empty($email) && !empty($password) && !empty($confirmPassw
                 $sql2 = mysqli_query($conn, "INSERT INTO `users` (`name`, `email`, `password`) VALUES ('{$name}', '{$email}', '{$passhash}')");
                 if ($sql2) {
                     $id = mysqli_insert_id($conn);
-                    $sql3 = "CREATE TABLE IF NOT EXISTS `user_$id` (`sno` INT(8) NOT NULL AUTO_INCREMENT , `title` VARCHAR(255) NOT NULL , `description` TEXT NOT NULL , PRIMARY KEY (`sno`))";
+                    $sql3 = "CREATE TABLE IF NOT EXISTS `user_$id` (
+                        `sno` INT(8) NOT NULL AUTO_INCREMENT,
+                        `title` VARCHAR(255) NOT NULL,
+                        `description` TEXT NOT NULL,
+                        `timestamp` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        `imp` BOOLEAN NOT NULL DEFAULT 0,
+                        PRIMARY KEY (`sno`)
+                    )";
                     $result = mysqli_query($conn, $sql3);
+
                     if ($sql3) {
                         echo "success";
                     } else {

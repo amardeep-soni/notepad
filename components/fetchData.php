@@ -24,5 +24,5 @@ if ($num > 0) {
         $count++;
     }
 } else {
-    echo "<h2 class='text-white'>Insert the notes to display</h2>";
+    echo "<h2 class='text-white text-center'>Insert the notes to display</h2>";
 }

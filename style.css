@@ -125,7 +125,7 @@
 #addNotesCard .cirlce {
     width: 75px;
     height: 75px;
-    border: 4px dotted #50B9FA;
+    border: 4px dotted #2263f1;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -189,5 +189,13 @@
 }
 
 .timestamp {
+    color: #2263f1;
+}
+
+.card .card-footer .star-icon {
+    color: #adb5bd;
+}
+
+.card .card-footer .star-icon.active {
     color: #2263f1;
 }

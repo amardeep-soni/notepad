@@ -120,6 +120,26 @@ if (!isset($_SESSION['id'])) {
             var id = $(this).data('id');
             $("#deleteNote .modal-body #deleteId").val(id);
         });
+
+        function updateImp(noteId, imp) {
+            console.log(noteId, imp);
+            let xhr = new XMLHttpRequest();
+            xhr.open("POST", "./components/updateImp.php", true);
+            xhr.onload = () => {
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        let data = xhr.response;
+                        if (data == 'success') {
+                            location.reload();
+                        }
+                    }
+                }
+            }
+            let formData = new FormData();
+            formData.append('noteId', noteId);
+            formData.append('imp', imp);
+            xhr.send(formData);
+        }
     </script>
 </body>
 
